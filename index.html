@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caffe Balkan</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">Caffe Balkan</div>
+  <button id="navToggle" class="nav-toggle">☰</button>
+  <ul id="navLinks" class="nav-links">
+    <li><a href="#hero">Početna</a></li>
+    <li><a href="#menu">Meni</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img src="slike/logo.png" class="logo" alt="logo">
+    <h1>Caffe Balkan</h1>
+  </div>
+</section>
+
+
+<section class="menu reveal" id="menu">
+  <h2>Slatki meni</h2>
+
+  <div class="menu-layout">
+    <div class="option"
+      data-title="Čokoladna Royale"
+      data-price="45 KM"
+      data-image="slike/torta2.jpg"
+      data-desc="Belgijska čokolada sa preljevom od narandže i hrskavim lješnjacima.">
+      Čokoladna Royale
+    </div>
+
+    <div class="option"
+      data-title="Red Velvet"
+      data-price="50 KM"
+      data-image="slike/torta4.jpeg"
+      data-desc="Lagani krem sir i prepoznatljivi crveni biskvit.">
+      Red Velvet
+    </div>
+
+    <div class="option"
+      data-title="Cheesecake"
+      data-price="40 KM"
+      data-image="slike/torta3.png"
+      data-desc="Kremasti cheesecake sa šumskim voćem.">
+      Cheesecake
+    </div>
+
+    <div class="option"
+      data-title="Voćna torta"
+      data-price="42 KM"
+      data-image="slike/torta1.jpg"
+      data-desc="Vanilija krem i svježe sezonsko voće.">
+      Voćna torta
+    </div>
+  </div>
+
+  <div class="product-view" id="productView">
+    <img id="productImage" src="cake1.jpg">
+    <div>
+      <h3 id="productTitle">Čokoladna Royale</h3>
+      <p id="productDesc">Belgijska čokolada sa preljevom od narandže i hrskavim lješnjacima.</p>
+      <span id="productPrice">45 KM</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Designed by
+  <a href="https://instagram.com/elektrolob" target="_blank">Jovan</a>
+  -
+  <a href="https://instagram.com/elektrolob" target="_blank">ElektroLob</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
