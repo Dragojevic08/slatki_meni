@@ -20,6 +20,13 @@ font-weight:600;
 letter-spacing:1px;
 color:white;
 }
+.navbar.scrolled {
+    background: rgba(31,24,19,.95);
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
 .nav-links{display:flex;list-style:none;gap:25px}
 .nav-links a{text-decoration:none;color:white}
 .nav-toggle{display:none}
@@ -41,135 +48,122 @@ text-shadow:0 4px 25px rgba(0,0,0,.4);
 30%,50%{background-image:url('slike/pozadina2.jpg')}
 55%,75%{background-image:url('slike/pozadina3.jpg')}
 }
-.menu{
-max-width:1200px;
-margin:80px auto;
-padding:50px;
-background:#f7f1e7;
-border-radius: 25px;
-box-shadow:0 20px 50px rgba(0,0,0,.08);
+.menu {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #f7f1e7;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.08);
 }
-.menu-layout{
-display:flex;
-gap:40px;
-align-items:flex-start;
+
+.menu-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+    align-items: start;
 }
-h2{
-font-family:'Cormorant Garamond',serif;
-font-size:4rem;
-font-weight:600;
-letter-spacing:2px;
-margin-bottom:50px;
-text-align:center;
-color:var(--coffee);
+
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
-.menu-options{
-display:flex;
-flex-direction:column;
-gap:12px;
-width:350px;
+
+.option {
+    padding: 18px 20px;
+    background: white;
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
 }
-.option{
-padding:20px;
-background:#d2bc92;
-border-left:5px solid transparent;
-border-radius:12px;
-font-weight:500;
-cursor:pointer;
-transition:.35s;
+
+    .option:hover {
+        background: var(--champagne);
+        color: white;
+        transform: translateX(5px);
+    }
+
+    .option.active {
+        background: var(--coffee);
+        color: white;
+        border-color: var(--gold);
+    }
+
+.product-view {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,.08);
 }
-.option.active{
-background:var(--coffee);
-color:white;
-border-left:5px solid var(--gold);
-transform:translateX(10px);
+
+    .product-view img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+
+#productTitle {
+    font-family: 'Cormorant Garamond',serif;
+    font-size: 2.7rem;
+    margin-bottom: 10px;
 }
-a {
-    color: inherit;
-    text-decoration: none;
+
+#productDesc {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
 }
-.option:hover{
-transform:translateX(10px);
+
+#productPrice {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gold);
 }
-.product-view{
-flex:1;
-background:white;
-padding:25px;
-border-radius:20px;
-border:1px solid rgba(0,0,0,.08);
-}
-.product-view img{
-width:100%;
-height:500px;
-object-fit:cover;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,.18);
-}
-#productTitle{
-font-family:'Cormorant Garamond',serif;
-font-size:3rem;
-margin-top:20px;
-}
-#productDesc{
-font-size:1.1rem;
-line-height:1.9;
-margin-top:15px;
-}
-#productPrice{
-display:inline-block;
-margin-top:20px;
-font-size:2rem;
-font-weight:700;
-color:var(--gold);
-}
-@media(max-width:768px){
-.nav-toggle{
-display:block;
-background:none;
-border:none;
-color:white;
-font-size:2rem;
-}
-.nav-links{
-display:none;
-position:absolute;
-top:100%;
-right:0;
-width:100%;
-background:rgba(0,0,0,.9);
-flex-direction:column;
-padding:20px;
-}
-.nav-links.show{
-display:flex;
-}
-.logo{
-width:180px;
-}
-.hero h1{
-font-size:3.5rem;
-}
-.menu{
-padding:25px;
-}
-.menu-layout{
-flex-direction:column;
-}
-.menu-options{
-width:100%;
-}
-.option{
-width:100%;
-}
-.product-view{
-width:100%;
-}
-.product-view img{
-height:300px;
-}
-#productTitle{
-font-size:2rem;
-}
+@media(max-width:768px) {
+
+    .menu {
+        margin: 25px 15px;
+        padding: 20px;
+    }
+
+    .menu-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .product-view {
+        order: 1;
+    }
+
+    .menu-options {
+        order: 2;
+    }
+
+    .product-view img {
+        height: 250px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+    }
+
+    #productTitle {
+        font-size: 2rem;
+    }
+
+    .option {
+        padding: 16px;
+        font-size: 15px;
+    }
 }
 #lightbox{
 position:fixed;
