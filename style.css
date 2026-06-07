@@ -8,6 +8,8 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{
+overflow-x:hidden;
+width:100%;
 font-family:'Montserrat',sans-serif;
 background:var(--cream);
 color:var(--coffee);
@@ -36,11 +38,12 @@ a {
 .logo{width:300px;margin-bottom:15px}
 .hero h1{
 font-family:'Cormorant Garamond',serif;
-font-size:7rem;
+font-size:clamp(2.5rem,8vw,7rem);
 font-weight:600;
 letter-spacing:3px;
 text-transform:uppercase;
 text-shadow:0 4px 25px rgba(0,0,0,.4);
+padding:0 15px;
 }
 .hero p{font-size:1.2rem}
 @keyframes heroSlider{
@@ -128,6 +131,19 @@ text-shadow:0 4px 25px rgba(0,0,0,.4);
 }
 @media(max-width:768px) {
 
+    .hero h1{
+    font-size:2.8rem;
+    line-height:1;
+    letter-spacing:1px;
+}
+
+.logo{
+    width:140px;
+}
+
+.nav-logo{
+    font-size:1.5rem;
+}
     .menu {
         margin: 25px 15px;
         padding: 20px;
